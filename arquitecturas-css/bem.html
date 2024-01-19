@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    background-color: #1A191D;
+    color: #E4E6EB;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  .card {
+    width: 340px;
+    height: max-content;
+    border-radius: 16px;
+    margin: 48px;
+    background-color: #2A292E;
+  }
+
+  .card__header {
+    width: 100%;
+    height: 70px;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .card__avatar-border {
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #567EFC, #874AF7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+
+  }
+
+  .card__avatar-container {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #2A292E;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .card__avatar-img {
+    width: 100%;
+  }
+
+  .card__info-container {
+    grid-area: "name";
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  .card__name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .card__date {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #dddddd;
+  }
+
+  .card__body {
+    width: 100%;
+    height: calc(100% - 120px);
+  }
+
+  .card__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card__text {
+    margin: 8px;
+    font-size: .9rem;
+  }
+
+  .card__footer {
+    height: max-content;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+  }
+
+  .card__actions {
+    display: flex;
+  }
+
+  .card__action-button {
+    height: 38px;
+    padding: 0 12px 0 12px;
+    font-size: .9rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    color: #6B34E5;
+    cursor: pointer;
+  }
+
+  .card__interactions {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding-right: 8px;
+    fill: #B0B3B8;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <div class="card">
+    <section class="card__header">
+      <!--src="./assets/20210820_164732.jpg" -->
+      <div class="card__avatar-border">
+        <div class="card__avatar-container">
+          <img class="card__avatar-img" src="https://c.stocksy.com/a/yEz100/z9/473740.jpg" alt="">
+        </div>
+      </div>
+      <div class="card__info-container">
+        <p class="card__name">Susan Smith</p>
+        <p class="card__date">25 April 2021</p>
+      </div>
+    </section>
+    <section class="card__body">
+
+      <!--          src="https://www.ecuavisa.com/binrepository/884x495/37c0/825d495/none/11705/GTQJ/juan-roman-riquelme-boca-juniors_1292579_20231218184114.jpg"
+-->
+      <img class="card__img" src="http://www.perrosamigos.com/Uploads/perrosamigos.com/ImagenesGrandes/adiestramiento-raza-boxer.jpg"
+        alt="">
+      <p class="card__text">"Mi amado Sultan, compañero que ilumina mis días con su lealtad y energía inagotable. Siempre listo para la diversión y lleno de amor incondicional. 🐾💙 #SultanMiFielCompañero" </p>
+    </section>
+    <section class="card__footer">
+      <div class="card__actions">
+        <button class="card__action-button">ACTION 1</button>
+        <button class="card__action-button">ACTION 2</button>
+      </div>
+      <div class="card__interactions">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+          viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+          <path
+            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+          viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+          <path
+            d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+        </svg>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

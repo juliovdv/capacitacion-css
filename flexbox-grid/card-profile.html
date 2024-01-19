@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .container-flex {
+    width: 250px;
+    height: 350px;
+    margin: 48px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    /**box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);*/
+  }
+
+  .container-grid {
+    width: 250px;
+    height: 350px;
+    border-radius: 16px;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-areas: "avatar"
+      "name"
+      "achievements" "button";
+    grid-template-rows: 120px 80px 120px 80px;
+
+  }
+
+  .avatar-profile-container {
+    grid-area: "avatar";
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+    margin-top: 32px;
+    border: solid 3px #567EFC;
+    border-radius: 50%;
+
+  }
+
+  .avatar-profile-container__gradient {
+    border-radius: 50%;
+    width: 91px;
+    height: 91px;
+    overflow: hidden;
+    margin-top: 32px;
+    background-image: linear-gradient(to right, #567EFC, #874AF7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .avatar-border {
+    width: 81px;
+    height: 81px;
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .avatar-profile-container img {
+    width: 100%;
+  }
+
+  .avatar-profile-container__gradient img {
+    width: 100%;
+  }
+
+  .name-profile-container {
+    grid-area: "name";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  .profile-status {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #777;
+  }
+
+  .achievements-container {
+    grid-area: "achievements";
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-container p {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .icon-container {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .crown {
+    background-color: #DCE3F9;
+    fill: #567EFC;
+  }
+
+  .star {
+    background-color: #E4D5FF;
+    fill: #874AF7;
+  }
+
+  .vertical-line {
+    border-left: 1px solid #ccc;
+    height: 100%;
+  }
+
+  .follow-button-container {
+    grid-area: "button";
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .horizontal-line {
+    border-top: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .follow-button {
+    width: 100%;
+    height: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: transparent;
+    color: #6B34E5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <div class="container-flex">
+    <section class="avatar-profile-container__gradient">
+      <div class="avatar-border">
+        <img src="./assets/20210820_164732.jpg" alt="">
+      </div>
+    </section>
+    <section class="name-profile-container">
+      <p class="profile-name">Julio Van Der Vluet</p>
+      <p class="profile-status">Beginner</p>
+    </section>
+    <section class="achievements-container">
+      <div class="stats-container">
+        <div class="icon-container crown">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18"
+            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+            <path
+              d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z" />
+          </svg>
+        </div>
+        <p>32</p>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="stats-container">
+        <div class="icon-container star">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18"
+            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+            <path
+              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+          </svg>
+        </div>
+        <p>459</p>
+      </div>
+    </section>
+
+    <section class="follow-button-container">
+      <div class="horizontal-line"></div>
+      <button class="follow-button">ADD FRIENDS</button>
+    </section>
+  </div>
+</body>
+
+</html>

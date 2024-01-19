@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("./assets/boca-juniors-logo-escudo-2-1.png");
+    background-size: contain;
+    O ajusta según tus necesidades 
+    background-position: center; */
+  }
+
+  :root {
+    --yellow: #F3B229;
+    /*#E4AA16;*/
+    --blue: #103F79;
+    /*#043793;*/
+  }
+
+  .container {
+    width: calc(80% - 96px);
+    height: calc(80vh - 96px);
+    display: grid;
+    background-color: var(--yellow);
+    border-radius: 16px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 16px;
+    padding: 48px;
+    grid-template-areas:
+      "div1 div1 div2 div2 div2 div5 div3 div3 div3"
+      "div1 div1 div2 div2 div2 div5 div3 div3 div3"
+      "div1 div1 div4 div4 div4 div4 div3 div3 div3"
+      "div6 div6 div4 div4 div4 div4 div3 div3 div3"
+      "div6 div6 div4 div4 div4 div4 div3 div3 div3"
+      "div6 div6 div4 div4 div4 div4 div3 div3 div3"
+      "div6 div6 div4 div4 div4 div4 div7 div7 div7"
+      "div6 div6 div4 div4 div4 div4 div7 div7 div7"
+      "div6 div6 div4 div4 div4 div4 div7 div7 div7"
+  }
+
+  .item {
+    border-radius: 16px;
+    border: 2px solid var(--blue);
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .container div:nth-child(1) {
+    grid-area: div1;
+  }
+
+  .container div:nth-child(2) {
+    grid-area: div2;
+  }
+
+  .container div:nth-child(3) {
+    grid-area: div3;
+  }
+
+  .container div:nth-child(4) {
+    grid-area: div4;
+  }
+
+  .container div:nth-child(5) {
+    grid-area: div5;
+  }
+
+  .container div:nth-child(6) {
+    grid-area: div6;
+  }
+
+  .container div:nth-child(7) {
+    grid-area: div7;
+  }
+
+  .container div:nth-child(8) {
+    grid-area: div8;
+  }
+
+  .container div img {
+    height: 100%;
+    max-width: 100%;
+    /*object-fit: contain;*/
+    object-fit: cover;
+    border-radius: 8px;
+
+    /* La imagen se ajustará para cubrir completamente el contenedor sin deformarse */
+    object-position: center;
+    /* Ajusta según tus preferencias para centrar la parte visible de la imagen */
+  }
+
+  .container div:nth-child(1) img {
+    object-fit: contain;
+  }
+
+  .container div:nth-child(2) img {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .container div:nth-child(6) img {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .container div:nth-child(7) img {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  /*  .container div:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    
+     grid-column-end: 3; 
+     grid-row-start: span 2; 
+     grid-row-end: 3; 
+     grid-row: 1 / 3; 
+     justify-self: end; 
+    
+  }*/
+</style>
+
+<body>
+  <section class="container">
+    <div class="item">
+      <img src="./assets/boca-juniors-logo-escudo-2-1.png" alt="">
+    </div>
+    <div class="item">
+      <img src="./assets/109734-3885194385.jpg" alt="">
+    </div>
+    <div class="item">
+      <img src="./assets/cavani-boca-1240049781.jpeg" alt="">
+    </div>
+    <div class="item">
+      <img src="./assets/Riquelme-Boca-1-e1687738605380-567651559.jpg" alt="">
+    </div>
+    <div class="item">
+      <img src="./assets/002600_1461457-1942283272.jpg" alt="">
+    </div>
+    <div class="item">
+      <img src="./assets/517293-2773953050.jpg" alt="">
+    </div>
+    <div class="item">
+      <img src="./assets/327333w720h860-3296414454.jpg" alt="">
+    </div>
+  </section>
+</body>
+
+</html>

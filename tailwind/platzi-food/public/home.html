@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="fixed  w-full z-10 py-2 px-3 bg-secondary flex justify-between items-center">
+    <div><img class="h-8" src="./images/logo-w.svg" alt=""></div>
+    <div><img class="h-8 py-1 fill-white" src="images/menu-icon.svg" alt=""></div>
+  </header>
+  <section class="h-56 md:h-100 md:bg-center bg-no-repeat bg-cover bg-bottom"
+    style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+  </section>
+  <main class=" bg-zinc-900">
+    <section class="md:mx-auto md:flex p-3 md:py-5 max-w-6xl">
+      <div class="text-white mt-3 md:flex md:w-1/2 md:bg-zinc-800 md:rounded-lg md:mr-2">
+        <div>
+          <img class="w-full rounded-xl md:rounded-r-none"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFtYnVnZXJ8ZW58MHx8MHx8fDA%3D"
+            alt="">
+        </div>
+        <div class="relative -mt-2 mx-2 p-2 shadow-lg bg-zinc-800 md:bg-transparent rounded-xl ">
+          <h2 class="text-xl tracking-tight font-semibold uppercase">hamburguesa completa</h2>
+          <p class="leading-snug">Hamburguesa con queso.</p>
+          <div class="mt-2 text-sm font-semibold text-gray-300">$5000</div>
+          <div class="mt-2 text-yellow-300">&starf;&starf;&starf;&starf;&star;</div>
+        </div>
+      </div>
+      <div class="text-white mt-3 md:flex md:w-1/2 md:bg-zinc-800 md:rounded-lg">
+        <div>
+          <img class="w-full rounded-xl md:rounded-r-none"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFtYnVnZXJ8ZW58MHx8MHx8fDA%3D"
+            alt="">
+        </div>
+        <div class="relative -mt-2 mx-2 p-2 shadow-lg bg-zinc-800 md:bg-transparent rounded-xl ">
+          <h2 class="text-xl tracking-tight font-semibold uppercase">hamburguesa completa</h2>
+          <p class="leading-snug">Hamburguesa con queso.</p>
+          <div class="mt-2 text-sm font-semibold text-gray-300">$5000</div>
+          <div class="mt-2 text-yellow-300">&starf;&starf;&starf;&starf;&star;</div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+  <section class="bg-zinc-900 text-zinc-200 p-3 md:flex md:justify-center">
+    <form class="flex flex-col w-full bg-zinc-800 p-2 rounded-lg md:max-w-96" action="">
+      <label for="">
+        Nombre
+      </label>
+      <input class="border rounded-lg border-zinc-700 text-zinc-200 py-1 px-3 bg-secondary focus:shadow-outline-primary"
+        type="text">
+      <label for="">
+        Email
+      </label>
+      <input class="border rounded-lg border-zinc-700 text-zinc-200 py-1 px-3 bg-secondary" type="email">
+      <label for="">
+        Comentarios
+      </label>
+      <textarea class="border rounded-lg border-zinc-700 text-zinc-200 py-1 px-3 bg-secondary" name="" id="" cols="30"
+        rows="10"></textarea>
+      <button class="bg-primary px-4 py-2 text-black text-lg rounded-lg mt-2">Enviar</button>
+    </form>
+  </section>
+  <footer
+    class="px-3 bottom-0 w-full bg-secondary text-white flex flex-col items-center md:flex-row-reverse md:justify-around md:items-start">
+    <div class="mt-4 w-full flex justify-between md:block md:w-fit">
+      <div class="hover:text-primary cursor-pointer"><i class="fa-brands fa-facebook"></i> @platzifood</div>
+      <div class="hover:text-primary cursor-pointer"><i class="fa-brands fa-x-twitter"></i> @platzifood</div>
+      <div class="hover:text-primary cursor-pointer"><i class="fa-brands fa-instagram"></i> @platzifood</div>
+    </div>
+    <ul class="my-4 flex flex-col items-center md:list-disc md:block">
+      <li>Soporte</li>
+      <li>Acerca de nosotros</li>
+      <li>Registro</li>
+      <li>Aviso de Privacidad</li>
+    </ul>
+  </footer>
+  <script src="https://kit.fontawesome.com/56cc626038.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

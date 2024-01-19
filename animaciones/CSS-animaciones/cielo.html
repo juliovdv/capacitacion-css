@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: skyblue;
+        }
+        .circ1 {
+            width: 120px;
+            height: 120px;
+            border-radius: 120px;
+            background-color: rgb(255, 255, 255);
+            margin: 20px 0 0 60px;
+        }
+
+
+        .circ2 {
+            width: 150px;
+            height: 80px;
+            border-radius: 80px / 50px;
+            background-color: rgb(255, 255, 255);
+            margin: -90px 0 0 80px;
+        }
+
+        .circ3 {
+            width: 150px;
+            height: 90px;
+            border-radius: 80px / 50px;
+            background-color: rgb(255, 255, 255);
+            margin: -90px 0 0 0px;
+        }
+
+        @keyframes animar {
+            0% {}
+
+            50% {
+                transform: translateX(700px) scale(1.2);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        #sq {
+            animation-name: animar;
+            animation-duration: 20s;
+            animation-timing-function: lineal;
+            animation-iteration-count: infinite;
+            opacity: 0.6;
+            margin: 0;
+            position: absolute;
+        }
+
+        #sq2 {
+            animation-name: animar;
+            animation-duration: 15s;
+            animation-timing-function: lineal;
+            animation-iteration-count: infinite;
+            opacity: 0.4;
+            position: absolute;
+            margin: 30px 0 0 0;
+        }
+
+        #sq3 {
+            animation-name: animar;
+            animation-duration: 12s;
+            animation-timing-function: lineal;
+            animation-iteration-count: infinite;
+            opacity: 0.7;
+            position: absolute;
+            margin: 100px 0 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sq">
+        <div class="circ1"></div>
+        <div class="circ2"></div>
+        <div class="circ3"></div>
+    </div>
+    <div id="sq2">
+        <div class="circ1"></div>
+        <div class="circ2"></div>
+        <div class="circ3"></div>
+    </div>
+    <div id="sq3">
+        <div class="circ1"></div>
+        <div class="circ2"></div>
+        <div class="circ3"></div>
+    </div>
+</body>
+
+</html>

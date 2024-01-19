@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #202124;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 32px;
+      max-width: 764px;
+      margin: 0 auto;
+    }
+    /*
+      auto-fit ajusta vs auto-fill rellena
+    */
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="./assets/591_estocolmo-1912_1050.jpg" alt="">
+    <img src="./assets/592_berlin-1936_1050.jpg" alt="">
+    <img src="./assets/600_tokio-1964_1050.jpg" alt="">
+    <img src="./assets/602_munich-1972_1050.jpg" alt="">
+    <img src="./assets/603_montreal-1976_1050.jpg" alt="">
+    <img src="./assets/604_moscu-1980_1050.jpg" alt="">
+    <img src="./assets/605_barcelona-1992_1050.jpg" alt="">
+    <img src="./assets/606_atlanta-1996_1050.jpg" alt="">
+    <img src="./assets/607_londres-2012_1050.jpg" alt="">
+  </div>
+</body>
+
+</html>
