@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #222;
+      display: grid;
+      place-content: center;
+      height: 100vh;
+    }
+
+    .wrapper {
+      perspective: 1000px;
+    }
+
+    .container {
+      display: grid;
+    }
+
+    .ticket {
+      box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
+      width: 600px;
+      aspect-ratio: 18/9;
+      border-radius: 5px;
+      position: relative;
+      transition: transform .5s ease-in-out;
+    }
+    
+    .ticket:hover {
+      transition: none;
+    }
+
+    .bg {
+      background: rgba(0, 0, 0, .3);
+      position: absolute;
+      filter: blur(20px);
+      width: 100%;
+      height: 100%;
+    }
+
+    h1 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #fff;
+      padding: 20px;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="ticket">
+        <div class="bg"></div>
+        <h1>Ticket Nro. 00001</h1>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const $ = selector => document.querySelector(selector);
+  const $wrapper = $('.wrapper');
+  const $ticket = $('.ticket');
+
+  const { width, height } = $wrapper.getBoundingClientRect();
+  const halfWidth = width / 2;
+  const halfHeigth = height / 2;
+  $wrapper.addEventListener('mousemove', event => {
+    const { offsetX, offsetY } = event;
+    const rotationX = ((offsetX - halfWidth) / halfWidth) * 10;
+    const rotationY = ((offsetY - halfHeigth) / halfHeigth) * 10;
+    $ticket.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
+  })
+
+  $wrapper.addEventListener('mouseleave', event => {
+    $ticket.style.transform = `rotateX(0deg) rotateY(0deg)`
+
+  })
+</script>
+
+</html>
